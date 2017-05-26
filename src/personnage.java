@@ -115,7 +115,7 @@ public class personnage {
 			}
 		
 		
-		StdDraw.picture((posX),(posY),"char.png");
+		StdDraw.picture((posX+32),(posY+32),"char.png");
 		/*System.out.println((posX/32)+" + "+((16)-posY/32)+
 				" actuel:"+labyrinthe.carte[16-(posY/32)][(posX/32)]+
 				" up:"+labyrinthe.carte[(16-1)-(posY/32)][(posX/32)]+

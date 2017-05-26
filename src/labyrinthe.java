@@ -35,34 +35,22 @@ public class labyrinthe{
 		for (int i=0;i<labyrinthe.hauteur;i++){
 			for (int j=0;j<labyrinthe.largeur;j++){
 				if (labyrinthe.carte[i][j] == 1){
-					StdDraw.picture(taille*(j+0.5),taille*(labyrinthe.hauteur - i - 0.5),"unbreakable2.png");
+					StdDraw.picture(taille*(j+0.5)+32,taille*(labyrinthe.hauteur - i - 0.5)+32,"unbreakable2.png");
 				}
 				if (labyrinthe.carte[i][j] == 2){
-					StdDraw.picture(taille*(j+0.5),taille*(labyrinthe.hauteur - i - 0.5),"breakable2.png");
+					StdDraw.picture(taille*(j+0.5)+32,taille*(labyrinthe.hauteur - i - 0.5)+32,"breakable2.png");
 				}
 				if (labyrinthe.carte[i][j] == 3){
-					StdDraw.picture(taille*(j+0.5),taille*(labyrinthe.hauteur - i - 0.5),"free2.png");
+					StdDraw.picture(taille*(j+0.5)+32,taille*(labyrinthe.hauteur - i - 0.5)+32,"free2.png");
 				}
 				if (labyrinthe.carte[i][j] == 4){
-					StdDraw.picture(taille*(j+0.5),taille*(labyrinthe.hauteur - i - 0.5),"bombe.png");
+					StdDraw.picture(taille*(j+0.5)+32,taille*(labyrinthe.hauteur - i - 0.5)+32,"bombe.png");
 				}
 				if (labyrinthe.carte[i][j] == 5){
-					StdDraw.picture(taille*(j+0.5),taille*(labyrinthe.hauteur - i - 0.5),"explosion.png");
+					StdDraw.picture(taille*(j+0.5)+32,taille*(labyrinthe.hauteur - i - 0.5)+32,"explosion.png");
 				}
 			}	
 		}
-	}
-	
-	
-	public static Boolean finJeu(personnage listePerso []){
-		
-		for (int i = 0; i < listePerso.length; i++){
-			if (listePerso[i].vie <= 0){
-				System.out.println("Le joueur "+i+" a perdu.");
-				return false;
-			}
-		}
-		return true;
 	}
 }
 
